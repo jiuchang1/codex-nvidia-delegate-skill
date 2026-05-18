@@ -1,0 +1,4 @@
+interface:
+  display_name: "NVIDIA Delegate"
+  short_description: "Use NVIDIA NIM models as lightweight helper delegates."
+  default_prompt: "Use NVIDIA-hosted models for lightweight drafting, classification, summarization, second opinions, or model comparison tasks when appropriate."
