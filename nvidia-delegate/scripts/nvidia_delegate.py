@@ -17,6 +17,7 @@ from typing import Any
 DEFAULT_BASE_URL = "https://integrate.api.nvidia.com/v1"
 
 MODEL_ALIASES = {
+    "llama-small": "meta/llama-3.1-8b-instruct",
     "glm": "z-ai/glm-5.1",
     "zai-glm": "z-ai/glm-5.1",
     "deepseek-flash": "deepseek-ai/deepseek-v4-flash",
@@ -119,7 +120,7 @@ def chat_once(model: str, prompt: str, args: argparse.Namespace) -> str:
 def main() -> int:
     parser = argparse.ArgumentParser(description="Delegate a prompt to NVIDIA-hosted chat models.")
     parser.add_argument("--base-url", default=os.environ.get("NVIDIA_BASE_URL", DEFAULT_BASE_URL))
-    parser.add_argument("--model", default="qwen-large", help="Alias or full model ID. Default: qwen-large")
+    parser.add_argument("--model", default="llama-small", help="Alias or full model ID. Default: llama-small")
     parser.add_argument("--compare", help="Comma-separated aliases/model IDs to run against the same prompt.")
     parser.add_argument("--system", default="Be concise, accurate, and explicit about uncertainty.")
     parser.add_argument("--prompt")

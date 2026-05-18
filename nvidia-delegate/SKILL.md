@@ -33,7 +33,7 @@ Avoid external delegation for:
 Run from PowerShell:
 
 ```powershell
-python "$env:USERPROFILE\.codex\skills\nvidia-delegate\scripts\nvidia_delegate.py" --model qwen-large --prompt "Summarize this in three bullets: ..."
+python "$env:USERPROFILE\.codex\skills\nvidia-delegate\scripts\nvidia_delegate.py" --model llama-small --prompt "Summarize this in three bullets: ..."
 ```
 
 Use stdin for longer prompts:
@@ -67,11 +67,12 @@ python "$env:USERPROFILE\.codex\skills\nvidia-delegate\scripts\nvidia_delegate.p
 The helper script includes aliases for known working model IDs:
 
 - `glm`: `z-ai/glm-5.1`
+- `llama-small`: `meta/llama-3.1-8b-instruct` (script default; useful fallback when hosted routes are slow)
 - `deepseek-flash`: `deepseek-ai/deepseek-v4-flash`
 - `deepseek-pro`: `deepseek-ai/deepseek-v4-pro`
 - `deepseek-coder`: `deepseek-ai/deepseek-coder-6.7b-instruct`
 - `qwen-coder`: `qwen/qwen3-coder-480b-a35b-instruct`
-- `qwen-large`: `qwen/qwen3.5-397b-a17b` (script default; fastest in initial local test)
+- `qwen-large`: `qwen/qwen3.5-397b-a17b`
 
 Full NVIDIA model IDs can be passed directly with `--model`.
 

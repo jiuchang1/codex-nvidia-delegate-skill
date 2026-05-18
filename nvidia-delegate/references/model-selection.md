@@ -4,10 +4,10 @@ Use these as practical defaults. Availability and latency can change with routin
 
 | Need | Suggested model |
 | --- | --- |
-| Fast general drafting, classification, short summaries | `qwen-large`, then `glm` or `deepseek-flash` |
+| Fast general drafting, classification, short summaries | `llama-small`, then `qwen-large` |
 | Stronger general reasoning, second opinions | `deepseek-pro` |
 | Code snippets, refactor ideas, bug hypotheses | `qwen-coder` or `deepseek-coder` |
-| Broad model comparison | `glm,deepseek-flash,qwen-coder` |
+| Broad model comparison | `llama-small,qwen-large,qwen-coder` |
 
 Prompt pattern for second opinions:
 
